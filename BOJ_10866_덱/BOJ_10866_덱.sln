@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29920.165
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BOJ_10866_덱", "BOJ_10866_덱.vcxproj", "{CF00FE15-9F1D-422D-B255-FC5794C42A36}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF00FE15-9F1D-422D-B255-FC5794C42A36}.Debug|x64.ActiveCfg = Debug|x64
+		{CF00FE15-9F1D-422D-B255-FC5794C42A36}.Debug|x64.Build.0 = Debug|x64
+		{CF00FE15-9F1D-422D-B255-FC5794C42A36}.Debug|x86.ActiveCfg = Debug|Win32
+		{CF00FE15-9F1D-422D-B255-FC5794C42A36}.Debug|x86.Build.0 = Debug|Win32
+		{CF00FE15-9F1D-422D-B255-FC5794C42A36}.Release|x64.ActiveCfg = Release|x64
+		{CF00FE15-9F1D-422D-B255-FC5794C42A36}.Release|x64.Build.0 = Release|x64
+		{CF00FE15-9F1D-422D-B255-FC5794C42A36}.Release|x86.ActiveCfg = Release|Win32
+		{CF00FE15-9F1D-422D-B255-FC5794C42A36}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8322C7D5-F4A6-4276-930E-3539F20903D9}
+	EndGlobalSection
+EndGlobal
