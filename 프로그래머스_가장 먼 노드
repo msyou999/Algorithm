@@ -1,0 +1,49 @@
+#include <string>
+#include <vector>
+#include <queue>
+
+using namespace std;
+
+int solution(int n, vector<vector<int>> edge) {
+    int answer = 0;
+    int key=0;
+    bool adj[20000][20000]={false, };
+    bool visited[20000]={false, };
+    int dist[20000]={0,};
+    queue<int> q;
+
+    for(int i=0; i<edge.size(); i++){
+        
+        adj[edge[i][0]-1][edge[i][1]-1]=true;
+        adj[edge[i][1]-1][edge[i][0]-1]=true;
+    }
+    
+    q.push(0);
+    visited[0]=true;
+    
+    while(!q.empty()){
+        int first = q.front();
+        
+        for(int i=1; i<n; i++){
+            if(adj[first][i]==true && visited[i]==false){
+                q.push(i);
+                visited[i]=true;
+                dist[i]=dist[first]+1;
+                
+                if(dist[i]>key)
+                    key = dist[i];
+             
+            }
+                
+        }
+        
+        q.pop();
+    }
+    
+    for(int i=0; i<n; i++){
+        if(key == dist[i])
+            answer++;
+    }
+ 
+    return answer;
+}
