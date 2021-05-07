@@ -1,0 +1,35 @@
+#include <string>
+#include <vector>
+
+using namespace std;
+
+vector<int> solution(vector<int> progresses, vector<int> speeds) {
+    vector<int> answer;
+    vector<int> key; 
+    
+    for(int i=0; i<progresses.size(); i++){
+        int day=0;
+        while(progresses[i]<100){
+            day++; // 100이하이므로 배포되는 날짜 하루 증가
+            progresses[i] += speeds[i]; // 진행척도 증가
+        }
+        key.push_back(day); // 각각의 진행도가 100을 달성하는데 걸리는 일 수 key에 차례로 넣기
+    }
+    
+    for(int i=1; i<key.size(); i++){ // 뒤의 것이 아무리 빨리 완성되어도 앞의 것이 먼저 배포되지 않으면 배포 불가능
+        if(key[i-1]>key[i]) // 만약 그럴 경우 뒤의 것을 앞의 것과 동일하게 바꿈
+            key[i]=key[i-1]; 
+    }
+ 
+    int tmp = 1;
+    for(int i=1; i<=key.size(); i++){
+        if(key[i-1]==key[i]){ // 배포되는 날짜가 같으면 증가
+            tmp++;
+        }
+        else{
+            answer.push_back(tmp); // 다르면 answer에 푸시
+            tmp = 1; // 다시 갯수 초기화
+        }
+    }
+    return answer;
+}
